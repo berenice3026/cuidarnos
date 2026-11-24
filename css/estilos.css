@@ -1,0 +1,538 @@
+
+
+        body {
+            background: linear-gradient(135deg, #fff0f5, #ffe4ec, #ffd6df);
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+
+        .contenedor {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        header h1 {
+            color: #d63384;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            color: #8b4f72;
+            font-size: 1.1rem;
+        }
+
+        /* Tarjeta de cada pregunta */
+        .pregunta {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(255, 105, 135, 0.15);
+            margin-bottom: 2rem;
+        }
+
+        .pregunta h3 {
+            color: #8b4f72;
+            font-size: 1.15rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+
+        /* Botones de respuesta */
+        .opcion {
+            display: block;
+            width: 100%;
+            padding: 0.9rem 1.2rem;
+            margin-bottom: 0.8rem;
+            background: #fff0f5;
+            border: 2px solid #ffc8d6;
+            border-radius: 12px;
+            color: #8b4f72;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: left;
+        }
+
+        .opcion:hover:not(.seleccionada) {
+            background: #ffe4ec;
+            border-color: #ff9fbb;
+        }
+
+        .opcion.seleccionada {
+            cursor: default;
+        }
+
+        .opcion.correcta {
+            background: #d4f8dc;
+            border-color: #51cf66;
+            color: #2b8a3e;
+            font-weight: 500;
+        }
+
+        .opcion.incorrecta {
+            background: #ffe0e0;
+            border-color: #ff8787;
+            color: #c92a2a;
+            font-weight: 500;
+        }
+
+        /* Mensaje con carita */
+        .mensaje {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            display: none;
+        }
+
+        .mensaje.feliz {
+            background: #e6f9eb;
+            color: #2b8a3e;
+            display: block;
+        }
+
+        .mensaje.triste {
+            background: #ffe6e6;
+            color: #c92a2a;
+            display: block;
+        }
+
+        .emoji {
+            font-size: 1.5rem;
+            margin-right: 0.5rem;
+        }
+
+        /* Responsivo */
+        @media (max-width: 480px) {
+            .pregunta {
+                padding: 1.5rem;
+            }
+        }
+        .navbar {
+    background-color: #e419bb; 
+    padding: 0.5em 0;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; 
+    justify-content: center;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+
+.navbar a:hover {
+    background-color: #5a21f8; 
+    color: #000;
+}
+.galeria img {
+  width: 220px;
+  height: auto;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  transform-style: preserve-3d;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.estilo1:hover {
+  transform: rotateY(15deg) scale(1.1);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+.tarjetas {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 3rem;
+        }
+
+        .tarjeta {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(255, 105, 135, 0.15);
+            width: 250px;
+            transition: transform 0.3s ease;
+        }
+
+        .tarjeta:hover {
+            transform: translateY(-5px);
+        }
+
+        .tarjeta h3 {
+            color: #d63384;
+            margin-bottom: 0.5rem;
+        }
+
+        .tarjeta p {
+            font-size: 1rem;
+            color: #8b4f72;
+            margin: 0;
+        }
+        /* ===== ESTILOS DE TARJETAS DE APOYO ===== */
+
+/* Sección general */
+.seccion-apoyo {
+    padding: 4rem 2rem;
+    background: #fff0f550;
+}
+
+.contenedor-apoyo {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.titulo-seccion {
+    color: #d63384;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtitulo-seccion {
+    color: #8b4f72;
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+}
+
+/* Contenedor de tarjetas */
+.grid-tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+/* Tarjeta individual */
+.tarjeta-apoyo {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(255, 105, 135, 0.15);
+    width: 340px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-apoyo:hover {
+    transform: translateY(-8px);
+}
+
+/* Cabecera de la tarjeta */
+.tarjeta-encabezado {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+}
+
+/* Colores para encabezados */
+.rosa-claro {
+    background: linear-gradient(135deg, #ff99aa, #ffb3c1);
+}
+.naranja-suave {
+    background: linear-gradient(135deg, #ffd591, #ffb74d);
+}
+.azul-cielo {
+    background: linear-gradient(135deg, #b3e5fc, #81d4fa);
+}
+.verde-menta {
+    background: linear-gradient(135deg, #dcedc8, #c5e1a5);
+}
+
+/* Contenido de la tarjeta */
+.tarjeta-cuerpo {
+    padding: 1.5rem;
+    text-align: left;
+}
+
+.tarjeta-titulo {
+    color: #d63384;
+    font-size: 1.25rem;
+    margin-bottom: 0.8rem;
+}
+
+.tarjeta-texto {
+    color: #6b5066;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.tarjeta-dato {
+    color: #8b4f72;
+    font-size: 0.9rem;
+    margin-bottom: 1.2rem;
+}
+
+/* Botón de la tarjeta */
+.boton-tarjeta {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem;
+    background: linear-gradient(90deg, #ff99aa, #ff6680);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+
+.boton-tarjeta:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(255, 102, 128, 0.3);
+}
+
+/* Responsivo */
+@media (max-width: 480px) {
+    .seccion-apoyo {
+        padding: 2rem 1rem;
+    }
+    .titulo-seccion {
+        font-size: 1.6rem;
+    }
+    .tarjeta-apoyo {
+        width: 100%;
+    }
+}
+
+
+        
+
+        .etiqueta {
+            display: inline-block;
+            background: #ffd6df;
+            color: #a83b6e;
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        section {
+            background: #fff;
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 15px rgba(255, 105, 135, 0.15);
+        }
+
+        section h2 {
+            color: #d63384;
+            font-size: 1.4rem;
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        section p {
+            color: #6b5066;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        ul, ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            color: #6b5066;
+            line-height: 1.7;
+            margin-bottom: 0.6rem;
+        }
+
+        .emociones-lista li strong {
+            color: #d63384;
+        }
+
+        .mensaje-clave {
+            background: linear-gradient(135deg, #fff0f5, #ffe4ec);
+            border-left: 4px solid #d63384;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-top: 1rem;
+        }
+
+        .mensaje-clave p {
+            color: #8b4f72;
+            font-weight: 500;
+            font-size: 1.05rem;
+            margin: 0;
+        }
+
+        .resaltado {
+            background: #fff4f8;
+            padding: 1rem;
+            border-radius: 10px;
+            border-left: 3px solid #ff9fbb;
+            margin: 1rem 0;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 2rem 1rem;
+            }
+            section {
+                padding: 1.5rem;
+            }
+            header h1 {
+                font-size: 1.6rem;
+            }
+        }
+        .contenedor-doble {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas del mismo ancho */
+    gap: 1.5rem; /* Espacio entre tarjetas */
+    margin: 1.5rem 0;
+}
+
+.tarjeta-texto {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(255, 105, 135, 0.12);
+}
+.card {
+      max-width: 200px;
+      margin: auto;
+      background-color: #ffffff;
+      border-radius: 5px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .card-content {
+      padding: 10px;
+    }
+
+    .card-title {
+      font-size: 1.5em;
+      color: #8b2e89;
+      margin-bottom: 05px;
+      text-align: center;
+    }
+
+    .card-description {
+      font-size: 1em;
+      color: #333;
+      text-align: justify;
+    }
+    form {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(173, 20, 87, 0.15);
+        }
+
+        h2 {
+            text-align: center;
+            color: #ad1457;
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin: 1.2rem 0 0.4rem;
+            font-weight: 500;
+            color: #5a2850;
+        }
+
+        input[type="text"], input[type="email"], select, textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #f0c8d0;
+            border-radius: 8px;
+            font-size: 1rem;
+            background: #fef7f9;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #ad1457;
+            box-shadow: 0 0 0 3px rgba(173, 20, 87, 0.15);
+        }
+
+        .opcion {
+            margin: 0.6rem 0;
+        }
+
+        .opcion input {
+            width: auto;
+            margin-right: 0.5rem;
+        }
+
+        .opcion label {
+            display: inline;
+            margin: 0;
+            color: #4a2040;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .estrellas {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .estrellas label {
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #f0c8d0;
+        }
+
+        .boton-enviar {
+            width: 100%;
+            margin-top: 1.8rem;
+            padding: 0.9rem;
+            background: linear-gradient(90deg, #ad1457, #d81b60);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .boton-enviar:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(216, 27, 96, 0.3);
+        }

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>abc de las emociones</title>
+<link rel="stylesheet" href="css/estilos.css">
+    <center>
+        <div class="navbar">
+            <ul>
+              <li><a href="index.html">PRINCIPAL</a><li></li>
+                <li><a href="descripcion.html">CONOCE MÁS </a><li></li>
+                <li><a href="adolescentes.html">APRENDIENDO A CUIDAR </a><li></li>
+                <li><a href="maestros.html">MAESTROS</a><li></li>
+                <li><a href="padres.html">PADRES</a><li></li>
+                <li><a href="form.html">OPINIÓN </a><li></li>
+                <li><a href="creadores.html">CONOCENOS</a><li></li>
+                <li><a href="informativa.html">INFORMATE</a><li></li>
+            </ul>
+        </div><br>
+    </center>
+</head>
+<body>
+    <center>
+    <div class="contenedor">
+        <header class="cabecera">
+            <h1>Nos interesa mucho conocer tu opinión</h1>
+        </header>
+        <form method="POST" action="#">
+            <label for="nombre">Tu nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="¿Cómo te llamas?" required>
+            <label>¿Qué te parece nuestra página?</label>
+            <div class="estrellas">
+                <input type="radio" id="estrella1" name="calificacion" value="1">
+                <label for="estrella1">⭐</label>
+                <input type="radio" id="estrella2" name="calificacion" value="2">
+                <label for="estrella2">⭐</label>
+                <input type="radio" id="estrella3" name="calificacion" value="3">
+                <label for="estrella3">⭐</label>
+                <input type="radio" id="estrella4" name="calificacion" value="4">
+                <label for="estrella4">⭐</label>
+                <input type="radio" id="estrella5" name="calificacion" value="5">
+                <label for="estrella5">⭐</label>
+            </div>
+            <label>¿Qué es lo que más te ha gustado?</label>
+            <div class="opcion">
+                <input type="radio" id="diseno" name="gusta" value="diseno">
+                <label for="diseno">El diseño y los colores</label>
+            </div>
+            <div class="opcion">
+                <input type="radio" id="productos" name="gusta" value="productos">
+                <label for="productos">La variedad de información </label>
+            </div>
+            <div class="opcion">
+                <input type="radio" id="facilidad" name="gusta" value="facilidad">
+                <label for="facilidad">Lo fácil de usar</label>
+            </div>
+            <div class="opcion">
+                <input type="radio" id="otro" name="gusta" value="otro">
+                <label for="otro">Otra cosa</label>
+            </div>
+            <label>¿Qué nos gustaría mejorar?</label>
+            <textarea id="mejoras" name="mejoras" placeholder="Escribe aquí tus sugerencias, ideas o lo que te gustaría ver..."></textarea>
+             
+            <button type="submit" class="boton-enviar">Enviar mi opinión 💌</button>
+        </form>
+    </div>
+
+    <script>
+        const form = document.querySelector('form');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const nombre = document.getElementById('nombre').value;
+            alert(`¡Gracias por participar, ${nombre}! 💖\nTus gustos y opinión nos ayudarán a mejorar mucho.`);
+            form.reset();
+        });
+    </script>
+</center>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>abc de las emociones</title>
+<link rel="stylesheet" href="css/estilos.css">
+    <center>
+        <div class="navbar">
+            <ul>
+              <li><a href="index.html">PRINCIPAL</a><li></li>
+                <li><a href="descripcion.html">CONOCE MÁS </a><li></li>
+                <li><a href="adolescentes.html">APRENDIENDO A CUIDAR </a><li></li>
+                <li><a href="maestros.html">MAESTROS</a><li></li>
+                <li><a href="padres.html">PADRES</a><li></li>
+                <li><a href="form.html">OPINIÓN </a><li></li>
+                <li><a href="creadores.html">CONOCENOS</a><li></li>
+                <li><a href="informativa.html">INFORMATE</a><li></li>
+            </ul>
+        </div><br>
+    </center>
+</head>
+<body>
+
+    <div class="contenedor">
+        <header>
+            <h1> Juego: Cuidarnos y Cuidar a los demás</h1>
+            <p>Lee cada situación y elige la respuesta que mejor ayude </p>
+        </header>
+        <div class="pregunta" id="p1">
+            <h3>1. Un compañero se siente triste porque no entendió algo en clase. ¿Qué haces?</h3>
+            <button class="opcion" data-respuesta="incorrecta"> Lo ignoras, no es tu problema</button>
+            <button class="opcion" data-respuesta="correcta"> Le dices con amabilidad que no se preocupe y le ofreces ayuda</button>
+            <div class="mensaje" id="msg1"></div>
+        </div>
+        <div class="pregunta" id="p2">
+            <h3>2. Te sientes muy enojado/a y no sabes qué hacer. ¿Qué te ayuda más?</h3>
+            <button class="opcion" data-respuesta="incorrecta">Gritarle a quien tengas cerca</button>
+            <button class="opcion" data-respuesta="correcta"> Tomas unas respiraciones profundas y buscas un lugar tranquilo</button>
+            <div class="mensaje" id="msg2"></div>
+        </div>
+        <div class="pregunta" id="p3">
+            <h3>3. Alguien se ve nervioso porque va a hablar frente a otros. ¿Qué le dices?</h3>
+            <button class="opcion" data-respuesta="incorrecta"> "Seguro lo harás mal, mejor no intentes"</button>
+            <button class="opcion" data-respuesta="correcta">"Confío en ti, hazlo con calma, ¡tú puedes!"</button>
+            <div class="mensaje" id="msg3"></div>
+        </div>
+        <div class="pregunta" id="p4">
+            <h3>4. Sientes que nadie te escucha y te sientes solo/a. ¿Qué haces por ti?</h3>
+            <button class="opcion" data-respuesta="incorrecta"> Te quedas callado/a y no le cuentas a nadie</button>
+            <button class="opcion" data-respuesta="correcta"> Buscas a alguien de confianza y le dices cómo te sientes</button>
+            <div class="mensaje" id="msg4"></div>
+        </div>
+        <div class="pregunta" id="p5">
+            <h3>5. Alguien está llorando. ¿Qué acción demuestra cuidado?</h3>
+            <button class="opcion" data-respuesta="incorrecta"> Te burlas de esa persona</button>
+            <button class="opcion" data-respuesta="correcta"> Te acercas con respeto y le preguntas si necesita algo</button>
+            <div class="mensaje" id="msg5"></div>
+        </div>
+        <div class="pregunta" id="p6">
+            <h3>6. Cometiste un error y te sientes culpable. ¿Cómo te tratas a ti mismo/a?</h3>
+            <button class="opcion" data-respuesta="incorrecta"> Te dices cosas feas y crees que no sirves para nada</button>
+            <button class="opcion" data-respuesta="correcta"> Te dices: "Todos podemos equivocarnos, aprendo y sigo adelante"</button>
+            <div class="mensaje" id="msg6"></div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.pregunta').forEach(function(pregunta) {
+            const opciones = pregunta.querySelectorAll('.opcion');
+            const mensaje = pregunta.querySelector('.mensaje');
+
+            opciones.forEach(function(boton) {
+                boton.addEventListener('click', function() {
+                    // Desactivar todos los botones de esta pregunta
+                    opciones.forEach(b => {
+                        b.classList.add('seleccionada');
+                        b.style.pointerEvents = 'none';
+                    });
+
+                    // Marcar el seleccionado
+                    const respuesta = this.getAttribute('data-respuesta');
+                    this.classList.add(respuesta);
+
+                    if (respuesta === 'correcta') {
+                        mensaje.className = 'mensaje feliz';
+                        mensaje.innerHTML = '<span class="emoji">😊</span> ¡Muy bien! Cuidas con respeto y cariño 💗';
+                    } else {
+                        mensaje.className = 'mensaje triste';
+                        mensaje.innerHTML = '<span class="emoji">😔</span> No te preocupes, ¡también podemos aprender! Intenta con la otra opción 💗';
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
